@@ -6,21 +6,15 @@
     "pages/databaseGuide/databaseGuide",
     "pages/addFunction/addFunction",
     "pages/deployFunctions/deployFunctions",
-    "pages/chooseLib/chooseLib",
-    "pages/calendar/calendar"
-  
+    "pages/chooseLib/chooseLib"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "考勤",
+    "navigationBarTitleText": "树洞",
     "navigationBarTextStyle": "black"
   },
-  "plugins": {
-    "calendar": {
-      "version": "1.2.1",
-        "provider": "wx23a9cef3522e4f7c"
-    }
-  }
+  "cloud":true
+ 
 }

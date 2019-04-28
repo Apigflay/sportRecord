@@ -1,6 +1,41 @@
 /**index.wxss**/
+page{
+  width: 100%;
+  height: 100%;
+}
+.bgImg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  filter: brightness(1);
+}
+.content{
+  padding:0 30rpx;
+}
+.title{
+  text-align: center;
+}
+/* .userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-page {
+.userAvatarUrl{
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userNickName{
+  color: #000;
+} */
+
+
+
+/* page {
   background: #f6f6f6;
   display: flex;
   flex-direction: column;
@@ -134,4 +169,4 @@ page {
   font-size: 24rpx;
   line-height: 36rpx;
   word-break: break-all;
-}
+} */

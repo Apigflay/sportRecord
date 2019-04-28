@@ -9,8 +9,9 @@
 		"newFeature": true
 	},
 	"appid": "wx711fcebf42eafe80",
-	"projectname": "sportRecord",
+	"projectname": "sport1",
 	"libVersion": "2.2.5",
+	"compileType": "miniprogram",
 	"condition": {
 		"search": {
 			"current": -1,
@@ -22,7 +23,8 @@
 		},
 		"plugin": {
 			"current": -1,
-			"list": []
+			"list": [],
+			"cloud": true
 		},
 		"game": {
 			"list": []

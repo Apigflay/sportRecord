@@ -1,10 +1,56 @@
 <!--index.wxml-->
-<button bindtap='goCalendarPage'>查看考勤记录</button>
-<!-- <calendar /> -->
-<view class="container">
+<image 
+    class='bgImg'
+    mode=""
+    src="../../images/1.jpg"
+  ></image>
+  <view class="content">
+      <view class="title">不忘初心</view>
+      <view class="title">每一天都期待和你相见</view>
+      <view class="maxim">没有努力过的人没有资格鄙视那些正在努力的人</view>
+  </view>
+ 
+<!-- 如果只是展示用户头像昵称，可以使用 <open-data /> 组件 -->
+<!-- <open-data class='userAvatarUrl' type="userAvatarUrl"></open-data> -->
+<!-- <open-data class='userNickName' type="userNickName"></open-data> -->
+<!-- 云函数 -->
+<button 
+      open-type="" 
+      bindtap='getMessage'
+      type="primary"
+      class=""
+      style=""
+      size="mini"
+    >点击获取信息</button>
+   <button 
+      open-type="" 
+      bindtap='findMessage'
+      type="primary"
+      class=""
+      style=""
+    >点击添加信息</button>
+    
+     <!-- <button 
+      open-type="" 
+      bindtap='getMessage'
+      type="primary"
+      class=""
+      style=""
+    >点击更新信息</button>
+    <button 
+      open-type="" 
+      bindtap='getMessage'
+      type="primary"
+      class=""
+      style=""
+    >点击删除信息</button> -->
+
+
+
+<!-- <view class="container"> -->
 
   <!-- 用户 openid -->
-  <view class="userinfo">
+  <!-- <view class="userinfo">
     <button 
       open-type="getUserInfo" 
       bindgetuserinfo="onGetUserInfo"
@@ -14,32 +60,32 @@
     <view>
       <button class="userinfo-nickname" bindtap="onGetOpenid">点击获取 openid</button>
     </view>
-  </view>
+  </view> -->
 
 
   <!-- 上传图片 -->
-  <view class="uploader">
+  <!-- <view class="uploader">
     <view class="uploader-text" bindtap="doUpload">
       <text>上传图片</text>
     </view>
     <view class="uploader-container" wx:if="{{imgUrl}}">
       <image class="uploader-image" src="{{imgUrl}}" mode="aspectFit" bindtap="previewImg"></image>
     </view>
-  </view>
+  </view> -->
 
 
   <!-- 操作数据库 -->
-  <view class="uploader">
+  <!-- <view class="uploader">
     <navigator url="../databaseGuide/databaseGuide" open-type="navigate" class="uploader-text">
       <text>前端操作数据库</text>
     </navigator>
-  </view>
+  </view> -->
 
   <!-- 新建云函数 -->
-  <view class="uploader">
+  <!-- <view class="uploader">
     <navigator url="../addFunction/addFunction" open-type="navigate" class="uploader-text">
       <text>快速新建云函数</text>
     </navigator>
-  </view>
+  </view> -->
 
-</view>
+<!-- </view> -->
