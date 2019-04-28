@@ -30,20 +30,21 @@
       style=""
     >点击添加信息</button>
     
-     <!-- <button 
+<button 
       open-type="" 
-      bindtap='getMessage'
+      bindtap='setMessage'
       type="primary"
       class=""
       style=""
+      size="mini"
     >点击更新信息</button>
-    <button 
+         <button 
       open-type="" 
-      bindtap='getMessage'
+      bindtap='removeMessage'
       type="primary"
       class=""
       style=""
-    >点击删除信息</button> -->
+    >点击删除信息</button>
 
 
 

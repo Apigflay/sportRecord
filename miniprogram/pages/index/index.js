@@ -76,7 +76,7 @@ Page({
   findMessage:function(){
     console.log("tianjai")
     const db = wx.cloud.database()
-    db.collection('aaa').add({
+    db.collection('reMove').add({
       // data 字段表示需新增的 JSON 数据
       data: {
         description: 'learn cloud database',
@@ -100,13 +100,35 @@ Page({
       }
     })
   },
-  //点击信息
-  dMessage: function () {
-
+  //点击修改信息
+  setMessage: function () {
+    console.log("xiugai")
+    const db = wx.cloud.database()
+    db.collection('reMove').doc('988c1b1b5cc578cb083bc1fb352f1817').update({
+      // data 传入需要局部更新的数据
+      data: {
+        // 表示将 done 字段置为 true
+        "done": true
+      },
+      success(res) {
+        console.log(res)
+      },
+      fail(err){
+        console.log(err)
+      }
+    })
   },
-  //点击信息
-  dMessage: function () {
-
+  //点击删除信息
+  removeMessage: function () {
+    const db = wx.cloud.database()
+    db.collection('reMove').doc('9c4488c75cc57901083c870a7af63f8c').remove({
+      success(res) {
+        console.log(res)
+      },
+      fail(err) {
+        console.log(err)
+      }
+    })
   },
 
 
