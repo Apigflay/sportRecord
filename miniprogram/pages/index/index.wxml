@@ -45,8 +45,22 @@
       class=""
       style=""
     >点击删除信息</button>
-
-
+<button 
+      open-type="" 
+      bindtap='getOpenid'
+      type="primary"
+      class=""
+      style=""
+      size="mini"
+    >点击获取openID</button>
+<button 
+      open-type="" 
+      bindtap='creatCollection'
+      type="primary"
+      class=""
+      style=""
+      size="mini"
+    >创建集合</button>
 
 <!-- <view class="container"> -->
 

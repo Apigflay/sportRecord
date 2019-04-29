@@ -8,11 +8,24 @@ Page({
     logged: false,
     takeSession: false,
     requestResult: '',
-    findMessage:null//点击查询数据库
+    findMessage:null,//点击查询数据库
+    openid:''//用户唯一标识
   },
 
   onLoad: function() {
-   
+    let that = this;
+    wx.cloud.callFunction({
+      name: 'getOpenId',
+      success(res) {
+        // console.log(res) // 3
+        that.setData({
+          openid: res.result.openid
+        })
+      },
+      fail(err) {
+        console.log(err)
+      }
+    })
     // wx.cloud.callFunction({
     //   // 云函数名称
     //   name: 'add',
@@ -76,7 +89,7 @@ Page({
   findMessage:function(){
     console.log("tianjai")
     const db = wx.cloud.database()
-    db.collection('reMove').add({
+    db.collection('111111').add({
       // data 字段表示需新增的 JSON 数据
       data: {
         description: 'learn cloud database',
@@ -130,11 +143,22 @@ Page({
       }
     })
   },
-
-
-
-
-
+// 点击创建就集合
+  creatCollection:function(){
+    const userOpenId = this.data.openid;
+    wx.cloud.callFunction({
+      name: 'creatCollection',
+      data:{
+        createCollection:userOpenId
+      },
+      success(res) {
+        console.log(res) // 3
+      },
+      fail(err) {
+        console.log(err)
+      }
+    })
+  },
   onGetUserInfo: function(e) {
     if (!this.logged && e.detail.userInfo) {
       this.setData({
