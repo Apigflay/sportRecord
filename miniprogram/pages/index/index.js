@@ -9,7 +9,8 @@ Page({
     takeSession: false,
     requestResult: '',
     findMessage:null,//点击查询数据库
-    openid:''//用户唯一标识
+    openid:'',//用户唯一标识
+    sss:''
   },
 
   onLoad: function() {
